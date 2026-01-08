@@ -1,0 +1,147 @@
+:root {
+  --gold-main: #C9A45C;
+  --gold-light: #E3C88A;
+  --black-main: #111111;
+  --white-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: var(--black-main);
+  color: white;
+}
+
+/* BACKGROUND PLACEHOLDER */
+.atelier-bg {
+  position: fixed;
+  inset: 0;
+  background: url("../images/placeholder-wedding.jpg") center/cover no-repeat;
+  filter: brightness(0.45);
+  z-index: -3;
+}
+
+/* FILM GRAIN */
+.grain {
+  position: fixed;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.12;
+  z-index: -2;
+}
+
+.atelier {
+  min-height: 100vh;
+  padding: 80px 20px;
+}
+
+.atelier-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.atelier-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(36px, 6vw, 64px);
+  letter-spacing: 0.05em;
+}
+
+.atelier-header p {
+  color: var(--gold-light);
+  letter-spacing: 0.25em;
+  font-size: 12px;
+}
+
+.steps {
+  max-width: 900px;
+  margin: auto;
+}
+
+.step {
+  display: none;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.step.active {
+  display: block;
+}
+
+.step h2 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 25px;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.options button {
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.options button:hover {
+  border-color: var(--gold-main);
+  color: var(--gold-main);
+  transform: translateY(-3px);
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.next {
+  display: inline-block;
+  margin-top: 30px;
+  color: var(--gold-main);
+  cursor: pointer;
+  letter-spacing: 0.2em;
+}
+
+.reveal {
+  display: none;
+  text-align: center;
+  margin-top: 80px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.reveal h2 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+}
+
+.download {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 30px;
+  border: 1px solid var(--gold-main);
+  color: var(--gold-main);
+  cursor: pointer;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,172 @@
+:root {
+  --gold-main: #C9A45C;
+  --gold-light: #E3C88A;
+  --black-main: #111111;
+  --white-bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--white-bg);
+  color: var(--black-main);
+  overflow-x: hidden;
+}
+
+/* PARTICLES */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* SOCIAL FLOAT */
+.social-float {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-float a {
+  color: var(--gold-main);
+  font-size: 18px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-float a:hover {
+  color: var(--gold-light);
+  transform: scale(1.2);
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+}
+
+.hero video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.logo {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+.event-text {
+  letter-spacing: 0.3em;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 7vw, 88px);
+  letter-spacing: 0.05em;
+}
+
+.tagline {
+  margin-top: 15px;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  color: var(--gold-light);
+}
+
+/* INTRO */
+.intro {
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.intro h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* FOOTER */
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 14px;
+  z-index: 2;
+  position: relative;
+}
+
+footer span {
+  display: block;
+  margin-top: 10px;
+  color: var(--gold-main);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .social-float {
+    right: 10px;
+  }
+
+  .logo {
+    width: 110px;
+  }
+}
+
+
+/* CTA BUTTON */
+.cta-btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 14px 40px;
+  border: 1.5px solid var(--gold-main);
+  color: var(--gold-main);
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  transition: all 0.4s ease;
+}
+
+.cta-btn:hover {
+  background: var(--gold-main);
+  color: #ffffff;
+}

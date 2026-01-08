@@ -1,0 +1,132 @@
+:root {
+  --gold-main: #C9A45C;
+  --gold-light: #E3C88A;
+  --black-main: #111111;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: var(--black-main);
+  color: white;
+}
+
+/* BACKGROUND */
+.portfolio-bg {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #1b1b1b, #000);
+  z-index: -3;
+}
+
+/* FILM GRAIN */
+.grain {
+  position: fixed;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.12;
+  z-index: -2;
+}
+
+/* PAGE */
+.portfolio {
+  padding: 140px 20px;
+}
+
+/* HEADER */
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 160px;
+}
+
+.portfolio-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 7vw, 72px);
+  letter-spacing: 0.05em;
+}
+
+.portfolio-header p {
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: var(--gold-light);
+}
+
+/* WEDDING */
+.wedding {
+  max-width: 1200px;
+  margin: 0 auto 180px;
+}
+
+.wedding-text {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.wedding-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+}
+
+.wedding-text span {
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  color: var(--gold-light);
+}
+
+/* MEDIA */
+.wedding-media {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: 22px;
+}
+
+.wedding-media img,
+.wedding-media video {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+}
+
+/* VIDEO */
+.video-wrap {
+  position: relative;
+}
+
+.sound-toggle {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* FADE IN */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .wedding-media {
+    grid-template-columns: 1fr;
+  }
+
+  .wedding-media img,
+  .wedding-media video {
+    height: 320px;
+  }
+
+  .wedding {
+    margin-bottom: 140px;
+  }
+}
